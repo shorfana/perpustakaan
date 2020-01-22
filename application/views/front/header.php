@@ -82,7 +82,7 @@
 				    <nav>
 						<ul class="hidden">
                             <li><a href="<?php echo base_url();?>home">Home</a></li>
-                            <li><a href="<?php echo base_url();?>kategori">Kategori</a></li>
+                            <li><a href="<?php echo base_url();?>fkategori">Kategori</a></li>
                             <li><a href="<?php echo base_url();?>books">Buku</a></li>
                             <li><a href="<?php echo base_url();?>about">About</a></li>
                         </ul>
