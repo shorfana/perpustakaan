@@ -10,11 +10,12 @@ class Konfigurasi_model extends CI_Model {
 
 	public function update($id, $foto){
 		$dat = array(
-			'NAMA_P'	=> $this->input->post('fullname'),
-			'ALAMAT_P'	=> $this->input->post('username'),
-			'ABOUT'		=> $this->input->post('jk'),
-			'DESKRIPSI'	=> $this->input->post('telp'),
-			'GAMBAR'	=> $foto['file_name']
+			'NAMA_P'		=> $this->input->post('namaperpus'),
+			'ALAMAT_P'		=> $this->input->post('alamatperpus'),
+			'ABOUT'			=> $this->input->post('about'),
+			'DESKRIPSI'		=> $this->input->post('deskripsi'),
+			'STATUS_PAKET'	=> $this->input->post('statuspaket'),
+			'GAMBAR'		=> $foto['file_name']
 		);
 		$this->db->where('ID_PERPUS', $id)->update('perpus', $dat);
 		if($this->db->affected_rows() > 0){
