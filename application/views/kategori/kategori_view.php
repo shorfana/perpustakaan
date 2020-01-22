@@ -5,7 +5,7 @@
         </div>
     </div>
     <?php if($this->session->userdata('role')=='superadmin'): ?>
-    <a href="<?php echo base_url() ?>buku/add" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Kategori</a>
+    <a href="<?php echo base_url() ?>kategori/add" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Kategori</a>
     <?php endif; ?>
     <div class="clearfix"></div>
     <div class="row">
