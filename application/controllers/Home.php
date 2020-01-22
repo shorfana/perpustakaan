@@ -27,7 +27,7 @@ class Home extends CI_Controller{
 
 
     $this->load->view('front/header');
-    $this->load->view('front/index');//melempar data dari view
+    $this->load->view('front/about');//melempar data dari view
     $this->load->view('front/footer');
 
   }
@@ -38,7 +38,7 @@ class Home extends CI_Controller{
 
 
     $this->load->view('front/header');
-    $this->load->view('front/index');//melempar data dari view
+    $this->load->view('front/book');//melempar data dari view
     $this->load->view('front/footer');
 
   }

@@ -30,15 +30,7 @@
 					<div class="navbar-header">
 					    <a class="navbar-brand" href="<?php echo base_url();?>home">Perpustakaan</a>
 					</div>
-					<!--START SEARCH BAR -->
-					<div class="search-bar">
-					  	<input type="text" placeholder="Search"/>
-					</div>
-					<div class="search">
-						<div class="search-open"><i class="fa fa-search" aria-hidden="true"></i></div>
-						<div class="search-exit"><i class="fa fa-times" aria-hidden="true"></i></div>	 
-					</div>
-					<!--END SEARCH BAR -->
+					
 					<!--START SHOPPING CAT ICON -->
 					<div class="shopping-icon">
 						<ul>
@@ -91,7 +83,7 @@
 						<ul class="hidden">
                             <li><a href="<?php echo base_url();?>home">Home</a></li>
                             <li><a href="<?php echo base_url();?>kategori">Kategori</a></li>
-                            <li><a href="<?php echo base_url();?>book">Buku</a></li>
+                            <li><a href="<?php echo base_url();?>books">Buku</a></li>
                             <li><a href="<?php echo base_url();?>about">About</a></li>
                         </ul>
 					</nav>
