@@ -40,17 +40,14 @@
 							                    <div class="book-tags book-tag-blacky">Author:
 							                    	<a href="author-profile.html" class="book-tag book-tag-blacky"><?php echo $b->AUTHOR ?></a>.
 							                    </div>
-							                    <div class="book-tags book-tag-blacky">Format:
-							                    	<a href="book.html" class="book-tag book-tag-blacky">eBook</a>, <a href="book.html" class="book-tag book-tag-blacky">Softcover</a>.
+							                    <div class="book-tags book-tag-blacky">Quantity:
+							                    	<a href="book.html" class="book-tag book-tag-blacky"><?php echo $b->QTY ?></a>.
 							                    </div>
 							                    <div class="book-tags book-tag-blacky">Categories:
 							                    	<a href="books.html" class="book-tag book-tag-blacky"><?php echo $b->KATEGORI ?></a>
 							                    </div>
 						                    </div>
 						                    <span class="line-blacky"></span>
-											<a href="book.html" class="book-price main-color">Price:
-												<span class="price-number-after">10$</span>
-											</a>
 					                    </div>
 									</div>
 								</div>

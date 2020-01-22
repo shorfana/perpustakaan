@@ -34,4 +34,14 @@ class Home_model extends CI_Model {
  }
 
 
+ function getCategory($id_admin){
+   $this->db->select('KATEGORI');
+   $this->db->distinct();
+   $this->db->from('buku');
+   $this->db->join('kategori_buku', 'buku.ID_KATEGORI = kategori_buku.ID_KATEGORI');
+   $this->db->where('ID_ADMIN', $id_admin);
+   $query = $this->db->get();
+   return $query->result();
+ }
+
 }

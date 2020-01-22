@@ -23,11 +23,11 @@
 							<div class="book-tags book-tag-blacky">Categories:
 								<a href="books.html" class="book-tag book-tag-blacky"><?php echo $buku_detail->KATEGORI ?></a>.
 							</div>
-							<div class="book-tags book-tag-blacky">Softcover:
-								<span class="price-number-after">20$</span>
+							<div class="book-tags book-tag-blacky">Publisher:
+								<span class="price-number-after"><?php echo $buku_detail->PUBLISHER ?></span>
 							</div>
-							<div class="book-tags book-tag-blacky">eBook:
-								<span class="price-number-after">10$</span>
+							<div class="book-tags book-tag-blacky">Tahun:
+								<span class="price-number-after"><?php echo $buku_detail->YEAR ?></span>
 							</div>
 							<div class="payment-way">
 								<img src="images/checkout.png" alt="payment ways">
@@ -39,7 +39,7 @@
 					        	<a class="linkedin" href="http://linkedin.com"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
 							</div>
 							<ul class="nav nav-tabs">
-							    <li class="active"><a data-toggle="tab" href="tryit.asp@filename=trybs_tabs_dynamic&stacked=h.html#home">About this book</a></li>
+							    <li class="active"><a data-toggle="tab" href="tryit.asp@filename=trybs_tabs_dynamic&stacked=h.html#home">Sinopsis</a></li>
 							    <li><a data-toggle="tab" href="tryit.asp@filename=trybs_tabs_dynamic&stacked=h.html#menu1">Softcover details</a></li>
 							    <li><a data-toggle="tab" href="tryit.asp@filename=trybs_tabs_dynamic&stacked=h.html#menu2">eBook details</a></li>
 							    <li><a data-toggle="tab" href="tryit.asp@filename=trybs_tabs_dynamic&stacked=h.html#menu3">Reviews</a></li>
@@ -47,11 +47,8 @@
 							<div class="tab-content">
 								<!--START ABOUT THIS  BOOK-->
 							    <div id="home" class="tab-pane tab-pane-about-this-books fade in active">
-							        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p><p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. </p>
-							        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-							        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-							        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-							        <a class="more">read more<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+							        <p><?php echo $buku_detail->SINOPSIS ?></p>
+							        <!-- <a class="more">read more<i class="fa fa-angle-down" aria-hidden="true"></i></a> -->
 							    </div>
 							    <!--END ABOUT THIS  BOOK-->
 							    <!--START SOFTCOVER DETAILS-->

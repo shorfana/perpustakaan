@@ -49,18 +49,25 @@ class Home extends CI_Controller{
 
   function books()
   {
-
+    $id_perpus = '1';
+    $id_admin = 'AD001';
+    $data['perpus'] = $this->Home_model->getDataPerpus($id_perpus);
+    $data['buku']   = $this->Home_model->getBukuByIdPerpus($id_admin);
 
     $this->load->view('front/header');
-    $this->load->view('front/books');//melempar data dari view
+    $this->load->view('front/books',$data);//melempar data dari view
     $this->load->view('front/footer');
 
   }
 
-  function kategori()
+  function fkategori()
   {
+    $id_admin = 'AD001';
+    $data['kategori'] = $this->Home_model->getCategory($id_admin);
+
+    // var_dump($data);die;
     $this->load->view('front/header');
-    $this->load->view('front/kategori');//melempar data dari view
+    $this->load->view('front/fkategori',$data);//melempar data dari view
     $this->load->view('front/footer');
 
   }
