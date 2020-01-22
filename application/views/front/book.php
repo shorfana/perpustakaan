@@ -29,14 +29,8 @@
 							<div class="book-tags book-tag-blacky">Tahun:
 								<span class="price-number-after"><?php echo $buku_detail->YEAR ?></span>
 							</div>
-							<div class="payment-way">
-								<img src="images/checkout.png" alt="payment ways">
-							</div>
 					        <div class="social-media">
-					        	<a class="facebook" href="http://facebook.com"><i class="fa fa-facebook  fa-2x" aria-hidden="true"></i></a>
-					        	<a class="twitter" href="http://twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-					        	<a class="googleplus" href="http://googleplus.com"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
-					        	<a class="linkedin" href="http://linkedin.com"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+					        	<a class="facebook" href="<?php echo base_url()."baca/buku/".$buku_detail->ID_BUKU ?>"><img src="<?php echo base_url()."assets/images/icon/student.png" ?>" width="50" height="50" title="Baca"></a>
 							</div>
 							<ul class="nav nav-tabs">
 							    <li class="active"><a data-toggle="tab" href="tryit.asp@filename=trybs_tabs_dynamic&stacked=h.html#home">Sinopsis</a></li>
