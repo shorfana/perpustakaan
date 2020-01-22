@@ -32,7 +32,7 @@ class Konfigurasi extends CI_Controller {
 			$this->form_validation->set_rules('alamatperpus', 'Alamat Perpus', 'trim|required');
 			$this->form_validation->set_rules('about', 'Tentang Perpus', 'trim|required');
 			$this->form_validation->set_rules('deskripsi', 'Deskripsi Perpus', 'trim|required');
-			$this->form_validation->set_rules('status', 'Status Paket', 'trim|required');
+			
 
 			if ($this->form_validation->run() == true) {
 				$config['upload_path'] = './assets/images/upload/perpus/';
