@@ -4,7 +4,7 @@
 				<div class="book-content-head">
 					<h2 class="main-color">Book Details</h2>
 					<span class="first-line"></span>
-				</div>	
+				</div>
 				<div class="row book-content-body">
 					<div class="col-md-4">
 						<div class="book-img">
@@ -13,15 +13,15 @@
 					</div>
 					<div class="col-md-8">
 						<div class="book-details">
-							<h3>SOME THINGS TAKE TIME</h3>
-							<div class="book-tags book-tag-blacky">Author: 
-								<a href="author-profile.html" class="book-tag book-tag-blacky"> Ahmed Hamdy</a>.
+							<h3><font color="#000"><?php echo $buku_detail->TITLE ?></font></h3>
+							<div class="book-tags book-tag-blacky">Author:
+								<a href="author-profile.html" class="book-tag book-tag-blacky"><?php echo $buku_detail->AUTHOR ?></a>.
 							</div>
-							<div class="book-tags book-tag-blacky">Format: 
+							<div class="book-tags book-tag-blacky">Format:
 								<a href="#" class="book-tag book-tag-blacky">eBook</a>, <a href="#" class="book-tag book-tag-blacky">Softcover</a>.
 							</div>
-							<div class="book-tags book-tag-blacky">Categories: 
-								<a href="books.html" class="book-tag book-tag-blacky">Adventures</a>, <a href="books.html" class="book-tag book-tag-blacky">Action</a>, <a href="books.html" class="book-tag book-tag-blacky">Action</a>.
+							<div class="book-tags book-tag-blacky">Categories:
+								<a href="books.html" class="book-tag book-tag-blacky"><?php echo $buku_detail->KATEGORI ?></a>.
 							</div>
 							<div class="book-tags book-tag-blacky">Softcover:
 								<span class="price-number-after">20$</span>
@@ -193,7 +193,7 @@
 					                            </div>
 					                            <div class="book-rating">
 													<span class="rating-word">Rating: </span><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>
-												</div> 
+												</div>
 						                        <button class="btn btn-block btn-lg book-reviews-btn post-capitalize" type="button">submit a review</button>
 						                    </form>
 					                    </div>
@@ -208,4 +208,3 @@
 			</div>
 		</div>
 		<!--START BOOK-CONTENT SECTION -->
-	

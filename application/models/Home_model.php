@@ -24,5 +24,14 @@ class Home_model extends CI_Model {
 
  }
 
+ function getBukuDetail($id_buku){
+   $this->db->select('*');
+   $this->db->from('buku');
+   $this->db->join('kategori_buku', 'buku.ID_KATEGORI = kategori_buku.ID_KATEGORI');
+   $this->db->where('ID_BUKU', $id_buku);
+   $query = $this->db->get();
+   return $query->row();
+ }
+
 
 }

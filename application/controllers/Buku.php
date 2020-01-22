@@ -5,7 +5,7 @@ class Buku extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('Buku_model'); 
+		$this->load->model('Buku_model');
 		$this->load->model('Petugas_model');
 		if($this->session->userdata('logged_in') == false){
 			redirect('welcome');

@@ -37,12 +37,12 @@ class Home extends CI_Controller{
   }
 
 
-  function book()
+  function book($id_buku)
   {
-
+    $data['buku_detail'] = $this->Home_model->getBukuDetail($id_buku);
 
     $this->load->view('front/header');
-    $this->load->view('front/book');//melempar data dari view
+    $this->load->view('front/book',$data);//melempar data dari view
     $this->load->view('front/footer');
 
   }

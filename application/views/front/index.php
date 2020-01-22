@@ -35,7 +35,7 @@
 									  	</div>
 									    <div class="divy">
 						                    <div class="book-desc">
-						                        <a href="book.html" class="head head-blacky"><?php echo $b->TITLE ?></a>
+						                        <a href="<?php echo base_url()."home/book/".$b->ID_BUKU ?>" class="head head-blacky"><?php echo $b->TITLE ?></a>
 						                        <span class="line-blacky"></span>
 							                    <div class="book-tags book-tag-blacky">Author:
 							                    	<a href="author-profile.html" class="book-tag book-tag-blacky"><?php echo $b->AUTHOR ?></a>.
