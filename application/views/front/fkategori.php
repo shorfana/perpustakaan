@@ -1,4 +1,8 @@
-
+<style type="text/css">
+.categories-page-background {
+	background-image: url('<?php echo base_url()."assets/images/kategori.jpg"?>'); 
+}
+</style>
 		<!--START CATEGORIES-PAGE-BACKGROUND SECTION -->
 		<div class="categories-page-background pages-background">
 			<h1>Kategori Buku</h1>
@@ -21,7 +25,7 @@
 							<div class="category-divy">
 			                    <span class="line-blacky"></span>
 			                    <div class="category-desc">
-			                        <a href="books.html" class="category-head head-blacky"><?php echo $k->KATEGORI ?></a>
+			                        <a href="<?php echo base_url()."books" ?>" class="category-head head-blacky"><?php echo $k->KATEGORI ?></a>
 			                    </div>
 			                </div>
 						</div>

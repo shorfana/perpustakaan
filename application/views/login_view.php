@@ -31,7 +31,7 @@
         <div class="animate form login_form">
           <section class="login_content">
             <form method="post" action="<?php echo base_url() ?>login/dologin">
-              <h1>Admin Login</h1>
+              <h1>Multi Login</h1>
               <?php
                 $announce = $this->session->flashdata('announce');
                 if(!empty($announce)){

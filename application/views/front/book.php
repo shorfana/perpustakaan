@@ -8,7 +8,7 @@
 				<div class="row book-content-body">
 					<div class="col-md-4">
 						<div class="book-img">
-							<img src="images/image-500×600.jpg" alt="SOME THINGS TAKE TIME">
+							<img src="<?php echo base_url()."assets/images/buku/".$buku_detail->COVER_BUKU ?>" alt="SOME THINGS TAKE TIME">
 						</div>
 					</div>
 					<div class="col-md-8">
@@ -34,9 +34,7 @@
 							</div>
 							<ul class="nav nav-tabs">
 							    <li class="active"><a data-toggle="tab" href="tryit.asp@filename=trybs_tabs_dynamic&stacked=h.html#home">Sinopsis</a></li>
-							    <li><a data-toggle="tab" href="tryit.asp@filename=trybs_tabs_dynamic&stacked=h.html#menu1">Softcover details</a></li>
 							    <li><a data-toggle="tab" href="tryit.asp@filename=trybs_tabs_dynamic&stacked=h.html#menu2">eBook details</a></li>
-							    <li><a data-toggle="tab" href="tryit.asp@filename=trybs_tabs_dynamic&stacked=h.html#menu3">Reviews</a></li>
 							</ul>
 							<div class="tab-content">
 								<!--START ABOUT THIS  BOOK-->
@@ -56,18 +54,9 @@
 							    			<dt>Publication date</dt>
 							    			<dd>March 07, 2017</dd>
 							    		</dl>
-							    		<dl class="col-md-6">
-							    			<dt>Number of pages</dt>
-							    			<dd>450</dd>
-							    			<dt>Edition Number</dt>
-							    			<dd>3</dd>
-							    			<dt>Price</dt>
-							    			<dd><span class="price-number-after">20$</span></dd>
-							    		</dl>
+
 							    	</div>
-							    	<div class="softcover-details-btn">
-										<a class="btn btn-lg softcover-book-btn" href="cart.html">Buy Softcover <i class="fa fa-angle-right"></i></a>
-									</div>
+
 							    </div>
 							    <!--END SOFTCOVER DETAILS-->
 							    <!--START EBOOKS DETAILS-->
@@ -81,18 +70,9 @@
 							    			<dt>Publication date</dt>
 							    			<dd>March 07, 2017</dd>
 							    		</dl>
-							    		<dl class="col-md-6">
-							    			<dt>Number of pages</dt>
-							    			<dd>450</dd>
-							    			<dt>Edition Number</dt>
-							    			<dd>3</dd>
-							    			<dt>Price</dt>
-							    			<dd><span class="price-number-after">10$</span></dd>
-							    		</dl>
+
 							    	</div>
-							    	<div class="ebook-details-btn">
-										<a class="btn btn-lg ebook-book-btn" href="cart.html">Buy eBook <i class="fa fa-angle-right"></i></a>
-									</div>
+
 							    </div>
 							    <!--END EBOOKS DETAILS-->
 							    <!--START PERSON REVIEWS -->
@@ -191,6 +171,8 @@
 									</div>
 									<!--START POST REVIEW -->
 							    </div>
+									<div class="ebook-details-btn">
+								</div>
 							    <!--END PERSON REVIEWS -->
 							</div>
 						</div>

@@ -1,4 +1,15 @@
+<style type="text/css">
+.home-background {
+  background-image:url('<?php echo base_url()."assets/images/home.jpg" ?>');
+  background-size: cover;
+  background-position:top;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  margin:0;
+  text-align: center;
+}
 
+</style>
 		<!--END MENU SECTION-->
 		<!--START HOME-BACKGROUND SECTION -->
 		<div class="home-background">
@@ -6,7 +17,7 @@
 				<div class="home-background-head-text">
 					<h1><?php echo $perpus->NAMA_P ?></h1>
 					<p>Lorem Ipsum is simply dummy text of the printing</p>
-					<button class="btn btn-lg first-btn" type="button">Let's Start Reading </button>
+					<button class="btn btn-lg first-btn" type="button">Ayo Lihat Buku </button>
 					<div class="arrow-down">
 						<i class="fa fa-angle-down"></i>
 					</div>
@@ -29,22 +40,19 @@
 							<?php foreach ($buku as $b): ?>
 								<div class="book-part col-xs-12 col-sm-6 col-md-3">
 									<div class="book-cart">
-									    <img src="images/image-200x250.jpg" alt="Design & Web design">
-									  	<div class="icons">
-									  		<a><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><a><i class="fa fa-star" aria-hidden="true"></i></a><a><i class="fa fa-share-alt" aria-hidden="true"></i></a>
-									  	</div>
-									    <div class="divy">
+									    <img src="<?php echo base_url()."assets/images/buku/".$b->COVER_BUKU ?>" alt="Design & Web design">
+									  	<div class="divy">
 						                    <div class="book-desc">
 						                        <a href="<?php echo base_url()."home/book/".$b->ID_BUKU ?>" class="head head-blacky"><?php echo $b->TITLE ?></a>
 						                        <span class="line-blacky"></span>
 							                    <div class="book-tags book-tag-blacky">Author:
-							                    	<a href="author-profile.html" class="book-tag book-tag-blacky"><?php echo $b->AUTHOR ?></a>.
+							                    	<a href="#" class="book-tag book-tag-blacky"><?php echo $b->AUTHOR ?></a>.
 							                    </div>
 							                    <div class="book-tags book-tag-blacky">Quantity:
-							                    	<a href="book.html" class="book-tag book-tag-blacky"><?php echo $b->QTY ?></a>.
+							                    	<a href="#" class="book-tag book-tag-blacky"><?php echo $b->QTY ?></a>.
 							                    </div>
 							                    <div class="book-tags book-tag-blacky">Categories:
-							                    	<a href="books.html" class="book-tag book-tag-blacky"><?php echo $b->KATEGORI ?></a>
+							                    	<a href="#" class="book-tag book-tag-blacky"><?php echo $b->KATEGORI ?></a>
 							                    </div>
 						                    </div>
 						                    <span class="line-blacky"></span>
@@ -57,7 +65,7 @@
 						</div>
 					</div>
 					<div class="book-cart-btn">
-						<a class="btn btn-lg new-releases-view-all-btn" href="books.html">view all <i class="fa fa-angle-right"></i></a>
+						<a class="btn btn-lg new-releases-view-all-btn" href="<?php echo base_url()."books" ?>">view all <i class="fa fa-angle-right"></i></a>
 					</div>
 				</div>
 

@@ -56,3 +56,4 @@ $route['fkategori']='home/fkategori';
 $route['about']='home/about';
 $route['book']='home/book';
 $route['books']='home/books';
+// $route['baca']='home/books';

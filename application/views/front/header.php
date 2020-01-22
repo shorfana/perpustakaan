@@ -28,7 +28,7 @@
 			<div class="container">
 				<div class="menu-section">
 					<div class="navbar-header">
-					    <a class="navbar-brand" href="<?php echo base_url();?>home">Perpustakaan</a>
+					    <a class="navbar-brand" href="<?php echo base_url();?>home"><span class="badge">Perpustakaan</span></a>
 					</div>
 
 					<!--START SHOPPING CAT ICON -->

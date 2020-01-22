@@ -1,11 +1,16 @@
 
+<style type="text/css">
+.about-page-background {
+	background-image: url('<?php echo base_url()."assets/images/about.jpg" ?>');
+}
+</style>
 		<!--START ABOUT-PAGE-BACKGROUND SECTION -->
 		<div class="about-page-background pages-background">
 			<h1>Tentang Perpustakaan</h1>
 		</div>
 		<!--END ABOUT-PAGE-BACKGROUND SECTION-->
-		
-		<!--START ABOUT-SECTION SECTION-->		
+
+		<!--START ABOUT-SECTION SECTION-->
 		<div class="about-section-content wrapper">
 			<div class="container">
 				<div class="about-us">
@@ -29,7 +34,7 @@
 						<p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.but also the leap into electronic typesetting </p>
 					</div>
 				</div>
-				
+
 				<div class="aboutus-info part-four">
 					<img src="images/image-1280x853.jpg" alt="Our Team">
 					<div class="aboutus-desc">
@@ -41,4 +46,3 @@
 			</div>
 		</div>
 		<!--END ABOUTUS-CONTENT SECTION-->
-		
