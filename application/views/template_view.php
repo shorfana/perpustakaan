@@ -106,6 +106,9 @@
                                     <li>
                                         <a href="<?php echo base_url()?>notification"><i class="fa fa-bell"></i>Notifikasi</a>
                                     </li>
+                                    <li>
+                                        <a href="<?php echo base_url()?>konfigurasi"><i class="fa fa-cog"></i>Konfigurasi</a>
+                                    </li>
                                 </ul>
                             </div>
                         <?php endif; ?>

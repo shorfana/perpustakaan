@@ -8,6 +8,11 @@ class Petugas_model extends CI_Model {
 		return $query;
 	}
 
+	public function getIDPerpus($yah){
+		$query = $this->db->where('USERNAME', $yah)->get('admin')->row()->ID_PERPUS;
+		return $query;
+	}
+
 	public function usernameCheck($input){
 		$hue = $this->db->where('USERNAME', $input)->get('admin');
 		if($hue->num_rows() == 0){
