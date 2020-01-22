@@ -1,4 +1,5 @@
 
+</style>
 	
 				    <!--START MENU TOGGLE ICON-->
 				    <div class="menu-toggle">
@@ -33,7 +34,7 @@
 				<div class="bookspage-body">
 					<div class="bookspage-content-head">
 						<h2 class="main-color">Jenis - Jenis Buku</h2>
-						<span class="first-line"></span>
+						
 					</div>
 					<div class="parts books-list">
 						<div class="row">
