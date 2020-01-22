@@ -33,25 +33,45 @@ class Buku extends CI_Controller {
 			$this->form_validation->set_rules('penerbit', 'Penerbit', 'trim|required');
 			$this->form_validation->set_rules('tahun', 'Tahun', 'trim|required|numeric');
 			$this->form_validation->set_rules('jumlah', 'Jumlah', 'trim|required|numeric');
+			$this->form_validation->set_rules('sinopsis', 'Sinopsis', 'trim|required');
+			$this->form_validation->set_rules('isbn', 'ISBN', 'trim|required|numeric');
 
 			if ($this->form_validation->run() == true) {
-				//GET : Petugas ID
+				$config['upload_path'] = './assets/images/upload/perpus/';
+				$config['allowed_types'] = 'gif|jpg|png';
+				$config['max_size']  = '2000';
+
 				$username = $this->session->userdata('username');
 				$id_petugas = $this->Petugas_model->getID($username);
 
-				if($this->Buku_model->insert($id_petugas) == true){
-					$this->session->set_flashdata('announce', 'Berhasil menyimpan data');
-					redirect('buku/add');
+				$this->load->library('upload', $config);
+
+				if ($this->upload->do_upload('cover') == true){
+					if($this->Buku_model->insertcover($id_petugas, $this->upload->data()) == true){
+						$this->session->set_flashdata('announce', 'Berhasil menyimpan data');
+						redirect('buku/add');
+					}else{
+						$this->session->set_flashdata('announce', 'Gagal menyimpan data');
+						redirect('buku/add');
+					}
 				}else{
-					$this->session->set_flashdata('announce', 'Gagal menyimpan data');
-					redirect('buku/add');
+					if($this->Buku_model->insert($id_petugas) == true){
+						$this->session->set_flashdata('announce', 'Berhasil menyimpan data');
+						redirect('buku/add');
+					}else{
+						$this->session->set_flashdata('announce', 'Gagal menyimpan data');
+						redirect('buku/add');
+					}
 				}
 			} else {
 				$this->session->set_flashdata('announce', validation_errors());
 				redirect('buku/add');
 			}
+
 		}
 	}
+
+	
 
 	public function submits(){
 		if($this->input->post('submit')){
@@ -60,14 +80,35 @@ class Buku extends CI_Controller {
 			$this->form_validation->set_rules('penerbit', 'Penerbit', 'trim|required');
 			$this->form_validation->set_rules('tahun', 'Tahun', 'trim|required|numeric');
 			$this->form_validation->set_rules('jumlah', 'Jumlah', 'trim|required|numeric');
+			$this->form_validation->set_rules('sinopsis', 'Sinopsis', 'trim|required');
+			$this->form_validation->set_rules('isbn', 'ISBN', 'trim|required|numeric');
 
 			if ($this->form_validation->run() == true) {
-				if($this->Buku_model->update($this->input->post('id')) == true){
-					$this->session->set_flashdata('announce', 'Berhasil menyimpan data');
-					redirect('buku/edit?idtf='.$this->input->post('id'));
+				$config['upload_path'] = './assets/images/upload/perpus/';
+				$config['allowed_types'] = 'gif|jpg|png';
+				$config['max_size']  = '2000';
+
+				$username = $this->session->userdata('username');
+				$id_petugas = $this->Petugas_model->getID($username);
+
+				$this->load->library('upload', $config);
+
+				if ($this->upload->do_upload('cover') == true){
+					if($this->Buku_model->updatecover($id_petugas, $this->upload->data()) == true){
+						$this->session->set_flashdata('announce', 'Berhasil menyimpan data');
+						redirect('buku/edit?idtf='.$this->input->post('id'));
+					}else{
+						$this->session->set_flashdata('announce', 'Gagal menyimpan data');
+						redirect('buku/edit?idtf='.$this->input->post('id'));
+					}
 				}else{
-					$this->session->set_flashdata('announce', 'Gagal menyimpan data');
-					redirect('buku/edit?idtf='.$this->input->post('id'));
+					if($this->Buku_model->update($id_petugas) == true){
+						$this->session->set_flashdata('announce', 'Berhasil menyimpan data');
+						redirect('buku/edit?idtf='.$this->input->post('id'));
+					}else{
+						$this->session->set_flashdata('announce', 'Gagal menyimpan data');
+						redirect('buku/edit?idtf='.$this->input->post('id'));
+					}
 				}
 			} else {
 				$this->session->set_flashdata('announce', validation_errors());
@@ -75,6 +116,7 @@ class Buku extends CI_Controller {
 			}
 		}
 	}
+
 
 	public function edit(){
 		$id = $this->input->get('idtf');

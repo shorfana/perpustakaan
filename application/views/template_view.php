@@ -106,8 +106,8 @@
                                     <li>
                                         <a href="<?php echo base_url()?>notification"><i class="fa fa-bell"></i>Notifikasi</a>
                                     </li>
-                                    <li>
-                                        <a href="<?php echo base_url()?>konfigurasi/edit?change_key=<?php echo 1 ?>&signup=0"><i class="fa fa-cog"></i>Konfigurasi</a>
+                                    <li> <?php $ID_PERPUS = $this->db->where('USERNAME', $this->session->userdata('username'))->get('admin')->row('ID_PERPUS')  ?>
+                                        <a href="<?php echo base_url()?>konfigurasi/edit?change_key=<?php echo $ID_PERPUS ?>&signup=0"><i class="fa fa-cog"></i>Konfigurasi</a>
                                     </li>
                                 </ul>
                             </div>
