@@ -43,7 +43,7 @@ class Konfigurasi extends CI_Controller {
 				$id_perpus = $this->Petugas_model->getIDPerpus($this->session->userdata('username'));
 
 				if ($this->upload->do_upload('foto') == true){
-					if($this->Konfigurasi_model->update($id_perpus, $this->upload->data()) == true){
+					if($this->Konfigurasi_model->updategambar($id_perpus, $this->upload->data()) == true){
 						$this->session->set_flashdata('announce', 'Berhasil menyimpan data');
 						redirect('konfigurasi/edit?change_key='.$this->input->post('id').'&signup=0');
 					}else{
@@ -51,8 +51,13 @@ class Konfigurasi extends CI_Controller {
 						redirect('konfigurasi/edit?change_key='.$this->input->post('id').'&signup=0');
 					}
 				}else{
-					$this->session->set_flashdata('announce', $this->upload->display_errors());
-					redirect('konfigurasi/edit?change_key='.$this->input->post('id').'&signup=0');
+					if($this->Konfigurasi_model->update($id_perpus) == true){
+						$this->session->set_flashdata('announce', 'Berhasil menyimpan data');
+						redirect('konfigurasi/edit?change_key='.$this->input->post('id').'&signup=0');
+					}else{
+						$this->session->set_flashdata('announce', 'Gagal menyimpan data');
+						redirect('konfigurasi/edit?change_key='.$this->input->post('id').'&signup=0');
+					}
 				}
 			} else {
 				$this->session->set_flashdata('announce', validation_errors());
