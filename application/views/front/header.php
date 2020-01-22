@@ -28,7 +28,7 @@
 			<div class="container">
 				<div class="menu-section">
 					<div class="navbar-header">
-					    <a class="navbar-brand" href="<?php echo base_url();?>front/index.php">Reading</a>
+					    <a class="navbar-brand" href="<?php echo base_url();?>home">Perpustakaan</a>
 					</div>
 					<!--START SEARCH BAR -->
 					<div class="search-bar">
@@ -89,12 +89,10 @@
 				  	</div>
 				    <nav>
 						<ul class="hidden">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="categories.html">Categories</a></li>
-                            <li><a href="books.html">Our Books</a></li>
-                            <li><a href="authors.html">Authors</a></li>
-                            <li><a href="customer-account.html">Sign In</a></li>
-                            <li><a href="store-pages.html">Store's All Pages</a></li>
+                            <li><a href="<?php echo base_url();?>home">Home</a></li>
+                            <li><a href="<?php echo base_url();?>kategori">Kategori</a></li>
+                            <li><a href="<?php echo base_url();?>book">Buku</a></li>
+                            <li><a href="<?php echo base_url();?>about">About</a></li>
                         </ul>
 					</nav>
 					<!--END MENU TOGGLE ICON-->

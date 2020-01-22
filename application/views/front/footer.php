@@ -9,42 +9,20 @@
 					</div>
 		        	<div class="row site-map">
 			        	<div class="col-xs-12 col-sm-6 col-md-4">
-			        		<a href="index.html">Home</a>
+                        <a href="<?php echo base_url();?>home">Home</a>
 			        	</div>
 			        	<div class="col-xs-12 col-sm-6 col-md-4">
-			        		<a href="about.html">About</a>
+                       <a href="<?php echo base_url();?>kategori">Kategori</a>
 			        	</div>
 			        	<div class="col-xs-12 col-sm-6 col-md-4">
-			        		<a href="careers.html">Careers</a>
+                        <a href="<?php echo base_url();?>book">Buku</a>
 			        	</div>
 			        	<div class="col-xs-12 col-sm-6 col-md-4">
-			       			<a href="categories.html">Categories</a>
+                        <a href="<?php echo base_url();?>about">About</a>
 			        	</div>
-			        	<div class="col-xs-12 col-sm-6 col-md-4">
-			        		<a href="authors.html">Authors</a>
-			        	</div>
-			        	<div class="col-xs-12 col-sm-6 col-md-4">
-			        		<a href="blog-grid-page.html">Community & Newsletters</a>
-			        	</div>
-			        	<div class="col-xs-12 col-sm-6 col-md-4">
-			        		<a href="ordering.html">Ordering</a>
-			        	</div>
-			        	<div class="col-xs-12 col-sm-6 col-md-4">
-			        		<a href="contact.html">Contact Us</a>
-			        	</div>
-			        	<div class="col-xs-12 col-sm-6 col-md-4">
-			        		<a href="faq.html">FAQ</a>
-			        	</div>
+			        	
 		        	</div>
-			        <div class="social-media">
-			        	<a class="facebook" href="#"><i class="fa fa-facebook  fa-2x" aria-hidden="true"></i></a>
-			        	<a class="twitter" href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-			        	<a class="youtube" href="#"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
-			        	<a class="googleplus" href="#"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
-			        	<a class="linkedin" href="#"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
-			        	<a class="instagram" href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-			        	<a class="pinterest" href="#"><i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i></a> 	
-					</div>
+			      
         		</div>
         	</div>
         </div>
@@ -55,12 +33,12 @@
         		<div class="row">
         			<div class="col-xs-12 col-sm-6">
 			        	<div class="copyright final-left">
-			        		Copyright &copy; 2018 <span>Reading</span>.Inc
+			        		Copyright &copy; 2020 <span>Perpustakaan</span>.Inc
 			        	</div>
 		        	</div>
 		        	<div class="col-xs-12 col-sm-6">
 				        <div class="copyright final-right">
-				        	Designed by: <span><a href="#">Ahmed Hamdy.</a></span>
+				        	 <span><a href="#">Perpustakaan</a></span>
 						</div>
 					</div>
 				</div>
