@@ -3,25 +3,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller{
 
-//   public function __construct()
-//   {
-//     parent::__construct();
-//     //Codeigniter : Write Less Do More
-//     $this->load->model('Dbs');
+  public function __construct()
+  {
+    parent::__construct();
+    //Codeigniter : Write Less Do More
+    $this->load->model('Home_model');
 
-//   }
+
+  }
 
   function index()
   {
-
+    $id_perpus = '1';
+    $id_admin = 'AD001';
+    $data['perpus'] = $this->Home_model->getDataPerpus($id_perpus);
+    $data['buku']   = $this->Home_model->getBukuByIdPerpus($id_admin);
 
     $this->load->view('front/header');
-    $this->load->view('front/index');//melempar data dari view
+    $this->load->view('front/index',$data);//melempar data dari view
     $this->load->view('front/footer');
 
   }
 
-  
+
   function about()
   {
 
@@ -32,7 +36,7 @@ class Home extends CI_Controller{
 
   }
 
-  
+
   function book()
   {
 
@@ -42,7 +46,7 @@ class Home extends CI_Controller{
     $this->load->view('front/footer');
 
   }
-  
+
   function books()
   {
 
@@ -52,7 +56,7 @@ class Home extends CI_Controller{
     $this->load->view('front/footer');
 
   }
-  
+
   function kategori()
   {
     $this->load->view('front/header');

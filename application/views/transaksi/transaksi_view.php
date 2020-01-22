@@ -11,11 +11,11 @@
                 <div class="x_title">
                     <h2>List Data <small>Transaksi peminjaman dan pengembalian</small></h2>
                     <div class="clearfix"></div>
-                </div> 
+                </div>
                 <div class="x_content">
                 <!-- Data -->
                 <?php if($total == 0): ?>
-                    <div class="alert alert-danger">Tidak ada data</div>
+                    <div class="alert alert-danger">Tidak ada transaksi</div>
                     <?php else: ?>
                     <div class="panel panel-primary">
                         <div class="panel-heading">

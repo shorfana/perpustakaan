@@ -11,7 +11,7 @@
                 <div class="x_title">
                     <h2>List Data <small>Peminjaman</small></h2>
                     <div class="clearfix"></div>
-                </div> 
+                </div>
                 <div class="x_content">
                 <!-- Notif -->
                 <?php $announce = $this->session->userdata('announce') ?>
@@ -24,7 +24,7 @@
                 <?php endif; ?>
                 <!-- Data -->
                 <?php if($total == 0): ?>
-                    <div class="alert alert-danger">Tidak ada data</div>
+                    <div class="alert alert-danger">Tidak ada transaksi</div>
                     <?php else: ?>
                     <table id="datatable" class="table table-striped table-bordered">
                         <thead>
