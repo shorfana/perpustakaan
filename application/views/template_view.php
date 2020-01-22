@@ -77,6 +77,9 @@
                                 <li>
                                     <a href="<?php echo base_url()?>petugas"><i class="fa fa-user"></i> Petugas</a>
                                 </li>
+                                <li>
+                                    <a href="<?php echo base_url()?>kategori"><i class="fa fa-reorder"></i> Kategori</a>
+                                </li>
                                 <?php endif;?>
                             </ul>
                         </div>
