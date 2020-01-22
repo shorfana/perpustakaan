@@ -84,7 +84,7 @@ $(function () {
             scrollTop: $(".home-page-section-three").offset().top
         }, 1000);
     });
-    
+
 //Authors Slider
     // Activate Carousel
     $("#myCarousel").carousel({interval: 6000, pause: "hover"});

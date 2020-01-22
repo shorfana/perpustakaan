@@ -30,12 +30,29 @@
 					<div class="navbar-header">
 					    <a class="navbar-brand" href="<?php echo base_url();?>home">Perpustakaan</a>
 					</div>
-					
+
 					<!--START SHOPPING CAT ICON -->
 					<div class="shopping-icon">
-						<ul>
-					      	<li><a id="cart"><i class="fa fa-shopping-cart"></i><span class="badge">3</span></a></li>
-					    </ul>
+
+					 <ul>
+						 <?php if ($this->session->userdata('status') == 'login') {?>
+ 								<li><a href="<?php echo base_url()."login/logout" ?>"><span class="badge"><?php echo "Logout" ?></span></a></li>
+ 						<?php }else {?>
+ 						 <li><a href="<?php echo base_url()."login" ?>"><span class="badge">Login</span></a></li>
+ 					 <?php	} ?>
+					 </ul>
+
+
+							<?php if ($this->session->userdata('status') == 'login') {?>
+								<ul>
+  								<li><span class="badge"><?php echo "HI...".$this->session->userdata('username')  ?></span></li>
+								</ul>
+								<!-- <ul>
+		 					      	<li><a id="cart"><i class="fa fa-shopping-cart"></i><span class="badge">3</span></a></li>
+								</ul> -->
+  						<?php }else {?>
+  					 <?php	} ?>
+
 					</div>
 					<div class="shopping-cart">
 						<!--START shopping-cart-header -->
@@ -45,7 +62,7 @@
 						        <span class="lighter-text">Total:</span>
 						        <span class="main-color-text">$2,229.97</span>
 					        </div>
-					    </div> 
+					    </div>
 					    <!--END shopping-cart-header -->
 					    <ul class="shopping-cart-items">
 						    <li class="clearfix">
@@ -70,7 +87,7 @@
 					    <div class="shopping-buttons">
 						    <a class="btn btn-lg home-page-view-cart-btn" href="cart.html">view cart</a>
 						    <a class="btn btn-lg home-page-checkout-btn" href="checkout.html">Checkout</a>
-						</div>    
+						</div>
 				    </div>
 				    <!--END SHOPPING CAT ICON -->
 				    <!--START MENU TOGGLE ICON-->

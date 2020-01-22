@@ -10,7 +10,7 @@ class Login_model extends CI_Model {
 		}else{
 			return false;
 		}
-	} 
+	}
 
 	public function userCheck(){
 		$username = $this->input->post('username');
@@ -32,6 +32,15 @@ class Login_model extends CI_Model {
 		}else{
 			return false;
 		}
+	}
+
+	function cek_login($table,$where){
+		return $this->db->get_where($table,$where);
+	}
+
+	function getUserId($username){
+    $query = $this->db->get_where('anggota', array('USERNAME' => $username));
+		return $query->row();
 	}
 
 }

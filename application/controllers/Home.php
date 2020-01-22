@@ -57,10 +57,10 @@ class Home extends CI_Controller{
 
   }
 
-  function fkategori()
+  function kategori()
   {
     $this->load->view('front/header');
-    $this->load->view('front/fkategori');//melempar data dari view
+    $this->load->view('front/kategori');//melempar data dari view
     $this->load->view('front/footer');
 
   }
