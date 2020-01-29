@@ -16,7 +16,6 @@
 			<div class=container>
 				<div class="home-background-head-text">
 					<h1><?php echo $perpus->NAMA_P ?></h1>
-					<p>Lorem Ipsum is simply dummy text of the printing</p>
 					<button class="btn btn-lg first-btn" type="button">Ayo Lihat Buku </button>
 					<div class="arrow-down">
 						<i class="fa fa-angle-down"></i>

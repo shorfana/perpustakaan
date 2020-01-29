@@ -12,10 +12,14 @@ class Home extends CI_Controller{
 
   }
 
-  function index()
+  function index($np)
   {
-    $id_perpus = '1';
-    $id_admin = 'AD001';
+    // var_dump($np);die;
+    $data_perpus = $this->Home_model->getWherePerpus($np);
+    $id_perpus = $data_perpus->ID_PERPUS;
+    $id_admin = $data_perpus->ID_ADMIN;
+    // var_dump($data_perpus);die;
+
     $data['perpus'] = $this->Home_model->getDataPerpus($id_perpus);
     $data['buku']   = $this->Home_model->getBukuByIdPerpus($id_admin);
 
@@ -24,6 +28,20 @@ class Home extends CI_Controller{
     $this->load->view('front/footer');
 
   }
+
+  // function p_name($nama_perpus)
+  // {
+  //   $data_perpus = $this->Home_model->getWherePerpus($nama_perpus);
+  //   $id_perpus = $data_perpus->ID_PERPUS;
+  //   $id_admin = $data_perpus->ID_ADMIN;
+  //   $data['perpus'] = $this->Home_model->getDataPerpus($id_perpus);
+  //   $data['buku']   = $this->Home_model->getBukuByIdPerpus($id_admin);
+  //
+  //   $this->load->view('front/header');
+  //   $this->load->view('front/index',$data);//melempar data dari view
+  //   $this->load->view('front/footer');
+
+  // }
 
 
   function about()

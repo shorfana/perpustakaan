@@ -24,6 +24,12 @@ class Home_model extends CI_Model {
 
  }
 
+ function getWherePerpus($np){
+   $dml = "SELECT * FROM admin join perpus where perpus.ID_PERPUS = admin.ID_PERPUS and perpus.ALAMAT_P = '$np'";
+   $query = $this->db->query($dml)->row();
+   return $query;
+ }
+
  function getBukuDetail($id_buku){
    $this->db->select('*');
    $this->db->from('buku');
